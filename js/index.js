@@ -1,35 +1,35 @@
+
+    // $(document).ready(function () {
+    //   var $title = $('.title')
+    //   var $timePosted = $('.time')
+    //   var $link = $('.link')
+    //   var $metaDescription = $('.meta')
+    //   var $rank = $('.rank')
+    //   var $upVotes = $('.upvotes')
+    //   var $userId = $('.userId')
+    //   var $tileImage = $('.tile-img')
+    //
+    //   $(function getNews () {
+    //     $.get('http://www.freecodecamp.com/news/hot', function (news) {
+    //       var title = news.headline
+    //       var link = news.link
+    //       var time = news.timePosted
+    //       var rank = news.rank
+    //       var upvotes = news.upvotes
+    //       var author = news.author
+    //       var userId = news.userId
+    //       var tileImage = news.image
+    //       var meta = news.metaDescription
+    //
+    //       $title.text(news.headline)
+    //       $link.append('href="' + news.link + '"')
+    //       $tileImage.append('<img src=' + news.image + '>')
+    //       console.log(news.headline)
+    //     })
+    //   })
+    //
+
 $(function ($) {
-    $(document).ready(function () {
-      var $title = $('.title')
-      var $timePosted = $('.time')
-      var $link = $('.link')
-      var $metaDescription = $('.meta')
-      var $rank = $('.rank')
-      var $upVotes = $('.upvotes')
-      var $userId = $('.userId')
-      var $tileImage = $('.tile-img')
-
-      $(function getNews () {
-        $.get('http://www.freecodecamp.com/news/hot', function (news) {
-          // var title = news.headline
-          // var link = news.link
-          // var time = news.timePosted
-          // var rank = news.rank
-          // var upvotes = news.upvotes
-          // var author = news.author
-          // var userId = news.userId
-          // var tileImage = news.image
-          // var meta = news.metaDescription
-
-          $title.text(news.headline)
-          $link.append('href="' + news.link + '"')
-          $tileImage.append('<img src=' + news.image + '>')
-          console.log(news.headline)
-        })
-      })
-
-
-
     $('.ripple-effect').click(function (e) {
       var rippler = $(this)
 
@@ -61,6 +61,5 @@ $(function ($) {
         top: y + 'px',
         left: x + 'px'
       }).addClass('animate')
-    })
     })
 })
