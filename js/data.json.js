@@ -1,4 +1,4 @@
-var xhr = new XMLHttpRequest()
+var xhr = new XMLHttpRequest();
 
 xhr.onload = function() {
   if (xhr.status === 200) {
@@ -15,7 +15,8 @@ xhr.onload = function() {
       newContent +=  '</span></span></span></a>';
     }
 
-document.getElementById('#content').innerHTML = newContent }
+    document.getElementById('#content').innerHTML = newContent;
+  }
 };
 
-xhr.open('GET', 'http://www.freecodecamp.com/news/hot', true)
+xhr.open('GET', 'http://www.freecodecamp.com/news/hot', true);
