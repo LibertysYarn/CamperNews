@@ -1,6 +1,4 @@
-/* -- import Roboto Font ------------------------------ */
-
-@import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
+@import 'tilecolors.css';
 
 
 /* Custom container */
@@ -32,6 +30,9 @@
 }
 
 
+/* -- import Roboto Font ------------------------------ */
+
+@import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
 
 /* -- box model --------------------------------------- */
 
@@ -68,10 +69,11 @@ body {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.1;
-  color: #212121;
+  color: #333;
   text-transform: inherit;
   letter-spacing: inherit;
 }
+
 .caption {
   font-size: 12px;
   font-weight: 300;
@@ -340,3 +342,40 @@ body {
     transform: scale(2.5);
   }
 }
+
+.color1 { background-color: #96a018}
+.color2 { background-color: #dfc06d}
+.color3 { background-color: #e7b554}
+.color4 { background-color: #fdde9b}
+.color5 { background-color: #1e3306}
+.color6 { background-color: #313411}
+.color7 { background-color: #ebc061}
+.color8 { background-color: #fedf9c}
+.color9 { background-color: #f0c76e}
+.color10 { background-color: #ecc161}
+.color11 { background-color: #81752a}
+.color12 { background-color: #60601a}
+.color13 { background-color: #3f3901}
+.color14 { background-color: #687c00}
+.color15 { background-color: #f2cc71}
+.color16 { background-color: #d9cf91}
+.color17 { background-color: #dbd193}
+.color18 { background-color: #d9d397}
+.color19 { background-color: #484512}
+.color20 { background-color: #5b6b0a}
+.color21 { background-color: #a0a322}
+.color22 { background-color: #482b13}
+.color23 { background-color: #492c14}
+.color24 { background-color: #526109}
+.color25 { background-color: #536209}
+.color26 { background-color: #495c02}
+.color27 { background-color: #e0e6cf}
+.color28 { background-color: #eefdcf}
+.color29 { background-color: #3e490a}
+.color30 { background-color: #3f4a07}
+.color31 { background-color: #434f09}
+.color32 { background-color: #505d0f}
+.color33 { background-color: #cddbbc}
+.color34 { background-color: #d2dec1}
+.color35 { background-color: #363126}
+.color36 { background-color: #609b8b}

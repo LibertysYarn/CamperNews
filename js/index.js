@@ -6,13 +6,15 @@ xhr.send();
 
 function reqListener() {
   console.log(xhr.response[1].link);
+
   if (xhr.status === 200) {
     news = xhr.response;
 
     var newContent = '';
     for (var i = 0; i < news.length; i++) {
-
-      newContent += '<a class="tile tile-lg tile-light-green ripple-effect" href="' + news[i].link + '">';
+      var size = ((Math.floor(Math.random() * (100 - 1 + 1)) + 1)%2) ? 'tile-sqr' : '';
+      var tileColor =  Math.floor(Math.random() * (36 - 1 + 1)) + 1;
+      newContent += '<a class="tile tile-lg ' + size + ' color' + tileColor.toString() + ' ripple-effect" href="' + news[i].link + '">';
       newContent += '<span class="content-wrapper">';
       newContent += '<span class="tile-content">';
       newContent += '<span class="tile-img tile-img-bg" style="background-image: url(' + news[i].image + ');"></span>';
@@ -23,6 +25,7 @@ function reqListener() {
     var content = document.getElementById('news');
     content.innerHTML = newContent;
   }
+
 }
 
 
@@ -30,7 +33,8 @@ function reqListener() {
 // -make default background image if none exists
 // -assign colors of tiles to key words in title
 // -assign tile size depending on title length
-// -add upvote, rank, author and 
+// -add upvote, rank, author and
+// -sort by newest, rank, tag
 
 
 $(function($) {
