@@ -19,9 +19,10 @@ function reqListener() {
       newContent += '<h3><a href="' + news[i].link + '">' + news[i].headline + '</a></h3>';
       newContent += '</div>';
       newContent += '<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">';
-      newContent += '<div class="minilogo"><img class="avatar" src="' + news[i].author.picture + ')"></div>';
+      newContent += '<div class="minilogo"><a href="http://www.freecodecamp.com/' + news[i].author.username + '"><img class="avatar" src="' + news[i].author.picture + ')"></a></div>';
       newContent += '<div>';
-      newContent += '<strong>' + news[i].author.username + '</strong>';
+      newContent += '<button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--colored"><i class="material-icons mdl-color-text--white" role="presentation">arrow_upward</i><span class="visuallyhidden">arrow_upward</span></button>'
+      newContent += '<a class="author-link" href="http://www.freecodecamp.com/' + news[i].author.username + '"><strong>' + news[i].author.username + '</strong></a>';
       newContent += '<span>' + jQuery.timeago(news[i].timePosted) + '</span>';
       newContent += '</div>';
       newContent += '</div>';
@@ -43,6 +44,7 @@ function reqListener() {
 // -assign tile size depending on title length
 // -add upvote, rank, author and
 // -sort by newest, rank, tag
+// -figure out where to put "mdl-menu--bottom-right"
 
 
 
