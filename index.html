@@ -28,33 +28,42 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
       <div class="mdl-layout__header-row">
-        <span class="android-title mdl-layout-title">
-              <img class="fcc-image" src="img/freecodecamp_logo.svg">
+        <span class="android-title mdl-layout-title add">
+              <img class="fcc-image" src="img/freecodecamp_logo.svg">.NEWS)
             </span>
+
 
         <!-- Add spacer, to align navigation to the right in desktop -->
         <div class="android-header-spacer mdl-layout-spacer"></div>
+
+  <!-- Navigation -->
+        <div class="android-navigation-container">
+          <nav class="android-navigation mdl-navigation">
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://www.freecodecamp.com/news#">Map</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://www.freecodecamp.com/news#">Chat</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://www.freecodecamp.com/news">News</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://github.com/FreeCodeCamp/freecodecamp/wiki/Home">Wiki</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://www.freecodecamp.com/jobs">Jobs</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://www.freecodecamp.com/about">About</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://www.freecodecamp.com/login">Sign In</a>
+          </nav>
+        </div>
+
+        <!-- Search and Add -->
         <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
           <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-            <i class="material-icons">search</i>
+            <i class="material-icons search">search</i>
           </label>
           <div class="mdl-textfield__expandable-holder">
             <input class="mdl-textfield__input" type="text" id="search-field">
           </div>
         </div>
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+          <a href="http://www.freecodecamp.com/stories/submit">
+            <i class="material-icons add">add_circle</i></a>
+        </label>
 
-        <!-- Navigation -->
-        <!-- <div class="android-navigation-container">
-              <nav class="android-navigation mdl-navigation">
-                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Phones</a>
-                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tablets</a>
-                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Wear</a>
-                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">TV</a>
-                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Auto</a>
-                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">One</a>
-                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Play</a>
-              </nav>
-            </div> -->
+
 
       </div>
     </div>
