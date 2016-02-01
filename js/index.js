@@ -12,15 +12,23 @@ function reqListener() {
 
     var newContent = '';
     for (var i = 0; i < news.length; i++) {
-      var size = ((Math.floor(Math.random() * (100 - 1 + 1)) + 1)%2) ? 'tile-sqr' : '';
-      var tileColor =  Math.floor(Math.random() * (36 - 1 + 1)) + 1;
-      newContent += '<a class="tile tile-lg ' + size + ' color' + tileColor.toString() + ' ripple-effect" href="' + news[i].link + '">';
-      newContent += '<span class="content-wrapper">';
-      newContent += '<span class="tile-content">';
-      newContent += '<span class="tile-img tile-img-bg" style="background-image: url(' + news[i].image + ');"></span>';
-      newContent += '<span class="tile-holder tile-holder-sm">';
-      newContent += '<span class="title">' + news[i].headline + '</span>';
-      newContent += '</span></span></span></a>';
+
+
+      newContent += '<div class="mdl-card mdl-cell mdl-cell--4" >';
+      newContent += '<div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(' + news[i].image + ');">';
+      newContent += '<h3><a href="' + news[i].link + '">' + news[i].headline + '</a></h3>';
+      newContent += '</div>';
+      newContent += '<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">';
+      newContent += '<div class="minilogo"><img class="avatar" src="' + news[i].author.picture + ')"></div>';
+      newContent += '<div>';
+      newContent += '<strong>' + news[i].author.username + '</strong>';
+      newContent += '<span>' + jQuery.timeago(news[i].timePosted) + '</span>';
+      newContent += '</div>';
+      newContent += '</div>';
+      newContent += '</div>';
+      newContent += '</div>';
+
+
     }
     var content = document.getElementById('news');
     content.innerHTML = newContent;
@@ -37,37 +45,39 @@ function reqListener() {
 // -sort by newest, rank, tag
 
 
-$(function($) {
-  $('.ripple-effect').click(function(e) {
-    var rippler = $($this);
 
-    // create .ink element if it doesn't exist
-    if (rippler.find('.ink').length === 0) {
-      rippler.append("<span class='ink'></span>");
-    }
 
-    var ink = rippler.find('.ink');
+  $.ready(function($) {
+    $('.ripple-effect').click(function(e) {
+      var rippler = $($this);
 
-    // prevent quick double clicks
-    ink.removeClass('animate');
+      // create .ink element if it doesn't exist
+      if (rippler.find('.ink').length === 0) {
+        rippler.append("<span class='ink'></span>");
+      }
 
-    // set .ink diametr
-    if (!ink.height() && !ink.width()) {
-      var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+      var ink = rippler.find('.ink');
+
+      // prevent quick double clicks
+      ink.removeClass('animate');
+
+      // set .ink diametr
+      if (!ink.height() && !ink.width()) {
+        var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+        ink.css({
+          height: d,
+          width: d
+        });
+      }
+
+      // get click coordinates
+      var x = e.pageX - rippler.offset().left - ink.width() / 2;
+      var y = e.pageY - rippler.offset().top - ink.height() / 2;
+
+      // set .ink position and add class .animate
       ink.css({
-        height: d,
-        width: d
-      });
-    }
-
-    // get click coordinates
-    var x = e.pageX - rippler.offset().left - ink.width() / 2;
-    var y = e.pageY - rippler.offset().top - ink.height() / 2;
-
-    // set .ink position and add class .animate
-    ink.css({
-      top: y + 'px',
-      left: x + 'px'
-    }).addClass('animate');
+        top: y + 'px',
+        left: x + 'px'
+      }).addClass('animate');
+    });
   });
-});
