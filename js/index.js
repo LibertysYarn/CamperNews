@@ -15,7 +15,7 @@ function reqListener() {
       newContent += '</div>';
       newContent += '<h3><a href="' + news[i].link + '">' + news[i].headline + '</a></h3>';
       newContent += '<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">';
-      newContent += '<div class="minilogo" data-value="'+ news[i].author.username +'"><a href=""><img class="avatar" src="' + news[i].author.picture + ')"></a></div>';
+      newContent += '<div class="minilogo" onclick="authorPosts(' + news[i].author.userId + ');"><a href=""><img class="avatar" src="' + news[i].author.picture + ')"></a></div>';
       newContent += '<div>';
       newContent += '<a class="author-link" href="http://www.freecodecamp.com/' + news[i].author.username + '"><strong>@' + news[i].author.username + '</strong></a>';
       newContent += '<span>' + jQuery.timeago(news[i].timePosted) + '</span>';
@@ -41,47 +41,38 @@ function reqListener() {
 // -assign colors of tiles to key words in title
 // -add upvote, rank, author and
 // -sort by newest, rank, tag
+$(document).ready(function() {
 
 
-
-
-
-$.ready(function() {
-
-
-  $(".minilogo").on("click", function() {  
-    // var data = $(".minilogo").data("data-value");
-    // console.log(data);
-    $.getJSON("http://www.freecodecamp.com/news/hot", function(json) {
-
-      var authorContent = "";
-      json = json.filter(function(val) {
-        console.log(json);
-        // return (val.author.username === data);
-
-      });
-
-      json.forEach(function(val) {
-        authorContent += '<div class="mdl-card mdl-cell mdl-cell--4" >';
-        authorContent += '<div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(' + news[i].image + ');">';
-        authorContent += '</div>';
-        authorContent += '<h3><a href="' + news[i].link + '">' + news[i].headline + '</a></h3>';
-        authorContent += '<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">';
-        authorContent += '<div class="minilogo"><a href="http://www.freecodecamp.com/' + news[i].author.username + '"><img class="avatar" src="' + news[i].author.picture + ')"></a></div>';
-        authorContent += '<div>';
-        authorContent += '<a class="author-link" href="http://www.freecodecamp.com/' + news[i].author.username + '"><strong>@' + news[i].author.username + '</strong></a>';
-        authorContent += '<span>' + jQuery.timeago(news[i].timePosted) + '</span>';
-        authorContent += '<span>' + news[i].rank + (news[i].rank > 1 ? " votes" : " vote") + '</span></div>';
-        authorContent += '<button id="' + news[i].id + '" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--primary mdl-upvote-btn"><i class="material-icons mdl-color-text--white btn" role="presentation">arrow_upward</i><span class="visuallyhidden">arrow_upward</span></button>';
-        authorContent += '</div>';
-        authorContent += '</div>';
-        authorContent += '</div>';
-        authorContent += '</div>';
-      });
-      var content = document.getElementById('news');
-      content.innerHTML = authorContent;
-    });
-  });
-
-
-}, JQuery);
+  function authorPosts(name) {
+    name = Id;
+    console.log(Id);
+  //   $.getJSON("http://www.freecodecamp.com/news/hot", function(json) {
+  //     var authorContent = '';
+  //     json = json.filter(function() {
+  //       return (author.userId === Id);
+  //     });
+  //
+  //     json.forEach(function() {
+  //       authorContent += '<div class="mdl-card mdl-cell mdl-cell--4" >';
+  //       authorContent += '<div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(' + news[i].image + ');">';
+  //       authorContent += '</div>';
+  //       authorContent += '<h3><a href="' + news[i].link + '">' + news[i].headline + '</a></h3>';
+  //       authorContent += '<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">';
+  //       authorContent += '<div class="minilogo"><a href="http://www.freecodecamp.com/' + news[i].author.username + '"><img class="avatar" src="' + news[i].author.picture + ')"></a></div>';
+  //       authorContent += '<div>';
+  //       authorContent += '<a class="author-link" href="http://www.freecodecamp.com/' + news[i].author.username + '"><strong>@' + news[i].author.username + '</strong></a>';
+  //       authorContent += '<span>' + jQuery.timeago(news[i].timePosted) + '</span>';
+  //       authorContent += '<span>' + news[i].rank + (news[i].rank > 1 ? " votes" : " vote") + '</span></div>';
+  //       authorContent += '<button id="' + news[i].id + '" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--primary mdl-upvote-btn"><i class="material-icons mdl-color-text--white btn" role="presentation">arrow_upward</i><span class="visuallyhidden">arrow_upward</span></button>';
+  //       authorContent += '</div>';
+  //       authorContent += '</div>';
+  //       authorContent += '</div>';
+  //       authorContent += '</div>';
+  //     });
+  //     var content = document.getElementById('news');
+  //     content.innerHTML = authorContent;
+  //   });
+  //
+  }
+});
