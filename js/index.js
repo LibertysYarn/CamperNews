@@ -12,7 +12,7 @@ function reqListener() {
     for (var i = 0; i < news.length; i++) {
 
       newContent += '<div class="mdl-card mdl-cell mdl-cell--4" >';
-      newContent += '<div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(' + randImg(news[i].image) + ');">';
+      newContent += '<div class="mdl-card__media mdl-color-text--grey-50 nimg" style="background-image: url(' + randImg(news[i].image) + ');">';
       newContent += '</div>';
       newContent += '<h3><a href="' + news[i].link + '">' + news[i].headline + '</a></h3>';
       newContent += '<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">';
@@ -31,30 +31,28 @@ function reqListener() {
     content.innerHTML = newContent;
 
 
-
-
-
-
     function randImg() {
-      var imgNum = getRandomInt();
+      var imgNum = getRandomInt(1, 33);
+      var urlVar = 'http://libertymontano.com/FCCfiles/CamperNews/img/mat/' + imgNum + '.png';
       var myRegExp = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!127(?:\.\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/i;
       var urlToValidate = news[i].image;
       if (!myRegExp.test(urlToValidate)) {
-        return 'http://libertymontano.com/FCCfiles/CamperNews/img/landscape/' + imgNum + '.jpg';
+        return urlVar;
       } else {
         return news[i].image;
       }
-    }
 
-    function getRandomInt() {
-      var a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
-      var random = [];
-      for (var i = a; i = a.length; i--) {
-        var random = a.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
-        return random;
-      }
+      $('.nimg').error(function(){
+              $(this).addClass('noImg');
+      });
 
     }
+
+    function getRandomInt(min, max) {
+      var random = Math.floor(Math.random() * (max - min + 1)) + min;
+      return random;
+    }
+
 
   }
 }
