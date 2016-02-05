@@ -1,0 +1,89 @@
+/*
+Theme Name: Divi-child
+Theme URI: http://www.elegantthemes.com/gallery/divi/
+Version: 1.7
+Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
+Author: Elegant Themes
+Author URI: http://www.elegantthemes.com
+*/
+
+
+/* Main Theme Styles */
+@import url("http://valjackson.com/content/themes/Divi/css/main-styles.css");
+
+
+@import url("http://valjackson.com/content/themes/Divi/css/advanced_options.css");
+
+/*@import url("http://valjackson/wp-content/themes/Divi/css/theme-customizer-controls-styles.css");*/
+
+/* Page Builder Modules Styles */
+/*@import url("http://valjackson/wp-content/themes/Divi/includes/builder/styles/frontend-builder-style.css");*/
+
+
+.et_color_scheme_red a { color: #8C1624; }
+
+.et_color_scheme_red .et_pb_counter_amount, .et_color_scheme_red .et_pb_featured_table .et_pb_pricing_heading, .et_color_scheme_red .et_pb_pricing_table_button, .et_color_scheme_red .comment-reply-link, .et_color_scheme_red .form-submit input { background: #cd5c5c !important; }
+
+.et_color_scheme_red.woocommerce a.button.alt, .et_color_scheme_red.woocommerce-page a.button.alt, .et_color_scheme_red.woocommerce button.button.alt, .et_color_scheme_red.woocommerce-page button.button.alt, .et_color_scheme_red.woocommerce input.button.alt, .et_color_scheme_red.woocommerce-page input.button.alt, .et_color_scheme_red.woocommerce #respond input#submit.alt, .et_color_scheme_red.woocommerce-page #respond input#submit.alt, .et_color_scheme_red.woocommerce #content input.button.alt, .et_color_scheme_red.woocommerce-page #content input.button.alt, .et_color_scheme_red.woocommerce a.button, .et_color_scheme_red.woocommerce-page a.button, .et_color_scheme_red.woocommerce button.button, .et_color_scheme_red.woocommerce-page button.button, .et_color_scheme_red.woocommerce input.button, .et_color_scheme_red.woocommerce-page input.button, .et_color_scheme_red.woocommerce #respond input#submit, .et_color_scheme_red.woocommerce-page #respond input#submit, .et_color_scheme_red.woocommerce #content input.button, .et_color_scheme_red.woocommerce-page #content input.button, .et_color_scheme_red .woocommerce-message, .et_color_scheme_red .woocommerce-error, .et_color_scheme_red .woocommerce-info { background: #cd5c5c !important; }
+
+.et_color_scheme_red #et_search_icon:hover, .et_color_scheme_red .mobile_menu_bar:before, .et_color_scheme_red .footer-widget h4, .et_color_scheme_red .et-social-icon a:hover, .et_color_scheme_red .et_pb_sum, .et_color_scheme_red .et_pb_pricing li a, .et_color_scheme_red .et_overlay:before, .et_color_scheme_red .entry-summary p.price ins, .et_color_scheme_red.woocommerce div.product span.price, .et_color_scheme_red.woocommerce-page div.product span.price, .et_color_scheme_red.woocommerce #content div.product span.price, .et_color_scheme_red.woocommerce-page #content div.product span.price, .et_color_scheme_red.woocommerce div.product p.price, .et_color_scheme_red.woocommerce-page div.product p.price, .et_color_scheme_red.woocommerce #content div.product p.price, .et_color_scheme_red.woocommerce-page #content div.product p.price { color: #cd5c5c !important; }
+
+.et_color_scheme_red .woocommerce .star-rating span:before, .et_color_scheme_red .woocommerce-page .star-rating span:before { color: #cd5c5c !important; }
+
+.et_color_scheme_red .et-search-form, .et_color_scheme_red .nav li ul, .et_color_scheme_red .et_mobile_menu, .et_color_scheme_red .footer-widget li:before, .et_color_scheme_red .et_pb_pricing li:before { border-color: #cd5c5c; }
+
+.et_pb_section {
+	padding: 10px 0;
+	position: relative;
+}
+
+.image-center {
+	text-align: center;
+}
+
+/* Top menu on homepage dark */
+.page-id-11 #top-menu a, .page-id-11 .et_mobile_menu a, #et_search_icon:before {
+    color: #ddd !important;
+}
+  
+.page-id-11 #top-menu a:hover, .page-id-11 .et_mobile_menu a:hover {
+    color: #fff !important;
+}
+  
+.page-id-11 .nav ul li a:hover, .page-id-11 .et_mobile_menu li a:hover { color: #111; background-color: #8C1624; }
+  
+.page-id-11 #top-menu li.mega-menu > ul > li > a:first-child, .page-id-11 .et_mobile_menu li a {
+    border-bottom: 1px solid #444;
+}
+  
+.page-id-11 #main-header, .page-id-11 .et_mobile_menu, .page-id-11 .nav li ul , .page-id-11 #top-menu li.mega-menu > ul > li > a:first-child:hover, .page-id-11 .et-search-form {
+    background-color: #8C1624 !important;
+}
+  
+.page-id-11 .et-search-form input {
+    background-color: #8C1624;
+    color: #999;
+}
+.page-id-11 #main-header {
+	background-color: #999;
+}
+
+/* end dark homepage menu */
+
+
+#footer-bottom { 
+	background-color: #8C1624; 
+	background-color: rgba(140, 22, 36, 0.8); 
+}
+
+#footer-info {
+	color: #d5d5d5;
+	text-decoration: none;
+}
+
+#footer-info a {
+	color: #d5d5d5;
+	font-weight: 400;
+}
+
+#jp-relatedposts { display: block; clear: both; padding-top: 3em; margin: 3em 0; }
