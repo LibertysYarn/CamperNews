@@ -21,8 +21,8 @@ xhr.onreadystatechange = function() {
         newContent += '<span>' + jQuery.timeago(news.items[i].pubDate) + '</span></div>';
         // newContent += '<span>' + news.items[i].score + (news.items[i].score > 1 ? " votes" : " vote") + '</span></div>';
         // newContent += '<button id="' + news.items[i].id + '" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--primary mdl-upvote-btn"><i class="material-icons mdl-color-text--white btn" role="presentation">arrow_upward</i><span class="visuallyhidden">arrow_upward</span></button>';
-        newContent += '<button id="controller-selector" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons" role="presentation">more_vert</i></button>';
-        newContent += '<ul class="mdl-menu mdl-menu--top-right mdl-js-menu" data-mdl-for="menu-top-right">';
+        newContent += '<button id="my-menu-top-right" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons" role="presentation">more_vert</i></button>';
+        newContent += '<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="my-menu-top-right">';
         (news.items[i].categories).map(e =>  newContent += '<li class="mdl-menu__item"><a href="https://medium.com/topic/' + e + '">' + e + '</a></li>');
         newContent += '</ul></div></div>';
         newContent += '</div>';
