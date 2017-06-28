@@ -53,5 +53,17 @@ h3 a {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .noImg {
-  background-image: url(http://libertymontano.com/FCCfiles/CamperNews/img/mat/1.png);
+  background-image: url('http://libertymontano.com/FCCfiles/CamperNews/img/mat/1.png');
 }
+/*.demo-menu.demo-menu__top-right .wrapper {
+    box-sizing: border-box;
+    position: absolute;
+    right: 16px;
+}
+.demo-menu.demo-menu__top-right .bar {
+    box-sizing: border-box;
+    position: relative;
+    height: 64px;
+    width: 100%;
+    padding: 16px;
+}*/

@@ -7,19 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Camper News</title>
 
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- <script src="js/jquery.min.js" type="text/javascript"></script> -->
-  <!-- <script src="js/defiant.min.js"></script> -->
-  <script src="js/material.min.js"></script>
-  <script src="js/jquery.min.js" type="text/javascript"></script>
-  <script src="js/jquery.timeago.js" type="text/javascript"></script>
-  <script src="js/index.js"></script>
-  <!-- <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')
-  </script> -->
-
-
   <link rel="stylesheet" href='http://libertymontano.com/FCCfiles/CamperNews/css/green-orange-material.css'>
   <link rel="stylesheet" href='http://libertymontano.com/FCCfiles/CamperNews/css/news.css' />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton" />
@@ -57,18 +44,16 @@
         <!-- Search and Add -->
         <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
           <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-            <i class="material-icons search">search</i>
-          </label>
+                        <i class="material-icons search">search</i>
+                    </label>
           <div class="mdl-textfield__expandable-holder">
             <input class="mdl-textfield__input" type="text" id="search-field">
           </div>
         </div>
         <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-          <a href="http://www.freecodecamp.com/stories/submit">
-            <i class="material-icons add">add_circle</i></a>
-        </label>
-
-
+                    <a href="http://www.freecodecamp.com/stories/submit">
+                        <i class="material-icons add">add_circle</i></a>
+                </label>
 
       </div>
     </div>
@@ -77,33 +62,18 @@
       <main class="mdl-layout__content">
         <div id="news" class="demo-blog__posts mdl-grid">
 
-
         </div>
       </main>
     </div>
-
-
-    <!-- <script type="defiant/xsl-template">
-        <xsl:template name="author_template">
-        <xsl:for-each select="//id">
-                <xsl:sort order="ascending" data-type="number" select="timePosted"/>
-        <div class="mdl-card mdl-cell mdl-cell--4" >
-        <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(' xsl:value-of select="image" + ');">
-            </div>
-            <h3><a href=" 'xsl:value-of select="link"' "> 'xsl:value-of select="art" ' </a></h3>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-            <div class="minilogo"><a href="http://www.freecodecamp.com/' + xsl:value-of select="author.username" + '"><img class="avatar" src="' + xsl:value-of select="author.picture" + ')"></a></div>
-            <div>
-            <a class="author-link" href="http://www.freecodecamp.com/' + xsl:value-of select="author.username" + '"><strong>@' + xsl:value-of select="author.username" + '</strong></a>';
-            <span>' + jQuery.timeago(xsl:value-of select="timePosted") + '</span>';
-            <span>' + xsl:value-of select="rank" + (xsl:value-of select="rank" > 1 ? " votes" : " vote") + '</span></div>';
-            <button id="' + xsl:value-of select="id" + '" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--primary mdl-upvote-btn"><i class="material-icons mdl-color-text--white btn" role="presentation">arrow_upward</i><span class="visuallyhidden">arrow_upward</span></button>';
-            </div>
-            </div>
-            </div>
-            </div>
-
-            </xsl:for-each>
-        </xsl:template>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/jquery.timeago.js" type="text/javascript"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="js/index.js"></script>
+    <!-- <script src="js/defiant.min.js"></script> -->
+    <!-- <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')
     </script> -->
+
 </body>
