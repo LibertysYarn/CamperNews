@@ -2,7 +2,18 @@
   height: 60px;
   width: 240px;
 }
-.mdl-layout__header-row .mdl-navigation__link {
+
+.nav-wrapper, .nav-green {
+  background-color: rgb(76, 175, 80);
+}
+
+nav ul li a {
+  font-size: 1.25em;
+  font-family: 'Anton', 'Roboto', monospace, sans-serif;
+  text-transform: uppercase;
+}
+
+/*.mdl-layout__header-row .mdl-navigation__link {
   display: block;
   color: #f5f5f5;
   line-height: 64px;
@@ -10,13 +21,22 @@
 }
 .mdl-navigation__link {
   font-size: 16px;
-}
+}*/
+
 .add, .search {
   color: #FFF;
 }
+
 .minilogo {
-  border-radius: 50px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding-top: 10px;
 }
+
 .avatar {
   width: 56px;
   height: 56px;
@@ -24,8 +44,34 @@
   background-repeat: no-repeat;
   /*background-size: 50%;*/
   border-radius: 50px;
+  vertical-align: top;
 }
-.demo-blog .mdl-card__media ~ .mdl-card__supporting-text {
+
+.block {
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.timeago {
+  font-size: .5em;
+}
+
+.author-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.author-item {
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+
+/*.demo-blog .mdl-card__media ~ .mdl-card__supporting-text {
   border: 1px #ddd;
   background-color: #f5f5f5;
 }
@@ -35,26 +81,40 @@
 .demo-blog .mdl-card h3 {
   padding: 0 10px;
   background-color: #f5f5f5;
-}
-h3 a {
+}*/
+
+.card-title a {
   font-family: 'Anton', sans-serif;
   color: #333;
 }
+
 .author-link {
   color: #757575;
-  text-decoration: bold;
+  font-size: .75em;
+  /*text-decoration: bold;*/
 }
+
 .author-link:hover {
   text-decoration: underline;
 }
-.mdl-card:hover, .mdl-card:active, .mdl-card.active, .mdl-card:focus, .mdl-card:active:focus, .mdl-card.active:focus {
+
+
+/*.mdl-card:hover, .mdl-card:active, .mdl-card.active, .mdl-card:focus, .mdl-card:active:focus, .mdl-card.active:focus {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
+}*/
+
 .noImg {
   background-image: url('http://libertymontano.com/FCCfiles/CamperNews/img/mat/1.png');
 }
+
+img.responsive-img, video.responsive-video {
+  max-width: 100%;
+  height: auto;
+}
+
+
 /*.demo-menu.demo-menu__top-right .wrapper {
     box-sizing: border-box;
     position: absolute;
@@ -67,3 +127,37 @@ h3 a {
     width: 100%;
     padding: 16px;
 }*/
+
+
+.cards-container {
+  column-break-inside: avoid;
+}
+.cards-container .card {
+  display: inline-block;
+  overflow: visible;
+}
+
+@media only screen and (max-width: 600px) {
+  .cards-container {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .cards-container {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .cards-container {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+.text-center {
+  text-align: center;
+}
